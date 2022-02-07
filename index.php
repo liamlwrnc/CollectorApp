@@ -12,6 +12,6 @@ foreach ($allPokemon as $pokemon) {
     echo "<p>" . "Name:" . $pokemon['name'] . "</p>";
     echo "<p>" . "Type 1:" . $pokemon['type_1'] . "</p>";
     echo "<p>" . "Type 2:" . $pokemon['type_2'] . "</p>";
-    echo "<p>" . "HP:" . $pokemon['hp'] . "</p>";
+    echo "<p>" . "HP:" . $pokemon['hp'] . "</p>" . "<br>";
 }
 
