@@ -1,10 +1,8 @@
 <?php
 function showPokemon(array $allPokemon) {
     $returnedHTML = "";
-    if (isset($allPokemon)) {
-        if ($allPokemon == "false") {
-            return 'WRONG INPUT';
-        }
+    if (count($allPokemon) === count($allPokemon, COUNT_RECURSIVE))  {
+        return 'WRONG INPUT';
     }
     foreach($allPokemon as $pokemon) {
         $returnedHTML .= "<p>" . "Pokedex ID: " . $pokemon['pokedex_id'] . "</p>" .
