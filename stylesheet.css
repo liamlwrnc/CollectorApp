@@ -3,9 +3,48 @@
     src: url(PokemonHollow.ttf);
 }
 
-h1 {
-    font-family: "PokemonHollow";
-    color: darkorange;
-    font-size: 5rem;
-
+@font-face {
+    font-family: "PokemonSolid";
+    src: url(PokemonSolid.ttf);
 }
+
+h1 {
+    font-family: "PokemonSolid";
+    color: black;
+    font-size: 5rem;
+    letter-spacing: 0.1em;
+}
+
+body {
+    background-image: url("starter4tran.png");
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cardContainer {
+    font-family: PokemonHollow;
+    border: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 3px 3px 2.5px #000000;
+    border-radius: 5px;
+    border-style: ridge;
+    background-color: darkorange;
+    padding: 30px;
+}
+
+.form-section {
+    padding: 40px;
+    font-family: PokemonHollow;
+    background-color: darkorange;
+    font-weight: bold;
+    box-shadow: 3px 3px 2.5px #000000;
+    border-radius: 5px;
+    border-style: ridge;
+    justify-content: space-around;
+}
+
