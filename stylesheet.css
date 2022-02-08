@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "PokemonHollow";
+    src: url(PokemonHollow.ttf);
+}
+
 h1 {
-    font-family: "Comic Sans MS";
+    font-family: "PokemonHollow";
+    color: darkorange;
+    font-size: 5rem;
+
 }
