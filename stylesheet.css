@@ -11,9 +11,9 @@
 h1 {
     font-family: "PokemonSolid";
     color: #000000;
-    font-size: 5rem;
+    font-size: 5.5rem;
     letter-spacing: 0.1em;
-    padding-right: 100px;
+
 }
 
 body {
@@ -24,6 +24,20 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+.search-form {
+    font-family: PokemonHollow;
+    background-color: #ff6a00;
+    font-weight: bold;
+    box-shadow: 3px 3px 2.5px #000000;
+    border-radius: 5px;
+    border-style: ridge;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 5px;
 }
 
 .cardContainer {
@@ -44,15 +58,5 @@ body {
     position: relative;
     height: 90px;
     left: 180px;
-}
-.form-section {
-    padding: 40px;
-    font-family: PokemonHollow;
-    background-color: #ff6a00;
-    font-weight: bold;
-    box-shadow: 3px 3px 2.5px #000000;
-    border-radius: 5px;
-    border-style: ridge;
-    justify-content: space-around;
 }
 

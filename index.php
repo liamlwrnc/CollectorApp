@@ -2,9 +2,10 @@
 require_once './functions.php';
 $db = new PDO('mysql:host=db; dbname=kantopokemon', 'root', 'password');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-$query = $db->prepare('SELECT * FROM `kanto pokemon plural`');
+$query = $db->prepare('SELECT * FROM `kanto-pokemon`');
 $query->execute();
 $allPokemon = $query->fetchAll();
+
 ?>
 
 <html>
@@ -16,6 +17,7 @@ $allPokemon = $query->fetchAll();
 <header>
     <h1>Pokemon of the Kanto Region</h1>
 </header>
+
 
 </body>
 </html>
