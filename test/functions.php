@@ -7,11 +7,12 @@ class Functions extends TestCase {
     public function testSuccessShowPokemon()
     {
         $input = [['pokedex_id' => 1, 'name' => 'Bulbasaur', 'type_1' => 'Grass', 'type_2' => 'Poison', 'hp' => 45]];
-        $expectedOutput = "<p>Pokedex ID: " . 1 . "</p>" .
+        $expectedOutput = "<div class='cardContainer'><p>Pokedex ID: " . 1 . "</p>" .
             "<p>Name: " . "Bulbasaur" . "</p>" .
             "<p>Type 1: " . "Grass" . "</p>" .
             "<p>Type 2: " . "Poison" . "</p>" .
-            "<p>HP: " . 45 . "</p>" . "<br>";
+            "<p>HP: " . 45 . "</p>" .
+            "<img src='kanto/bulbasaur.png'>" . "</div>";
         $actualOutput = showPokemon($input);
         $this->assertEquals($expectedOutput, $actualOutput);
     }
