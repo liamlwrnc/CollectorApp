@@ -33,7 +33,8 @@ body {
     box-shadow: 3px 3px 2.5px #000000;
     border-radius: 5px;
     border-style: ridge;
-    background-color: darkorange;
+    border-color: darkorange;
+    background-color: white;
     padding: 30px;
 }
 
