@@ -7,19 +7,15 @@ $query->execute();
 $allPokemon = $query->fetchAll();
 ?>
 
-<<<<<<< HEAD
-echo "<h1>Pokemon of the Kanto Region</h1>";
-=======
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <title>My Database</title>
 </head>
 <body>
-    <header>
-            <h1>Pokemon of the Kanto Region</h1>
-    </header>
->>>>>>> s1t2-functions
+<header>
+    <h1>Pokemon of the Kanto Region</h1>
+</header>
 
 </body>
 </html>
