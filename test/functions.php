@@ -11,6 +11,7 @@ class Functions extends TestCase {
             "<p>Name: " . "Bulbasaur" . "</p>" .
             "<p>Type 1: " . "Grass" . "</p>" .
             "<p>Type 2: " . "Poison" . "</p>" .
+            "<p>Region: " . "Kanto" . "</p>" .
             "<p>HP: " . 45 . "</p>" .
             "<img src='kanto/bulbasaur.png'>" . "</div>";
         $actualOutput = showPokemon($input);
