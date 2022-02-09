@@ -13,14 +13,10 @@ $allPokemon = $query->fetchAll();
     <title>My Database</title>
 </head>
 <body>
-<header>
-    <section>
-        <div class="main-heading">
+    <header>
             <h1>Pokemon of the Kanto Region</h1>
-        </div>
-    </section>
-</header>
-    <section class="form-section">
+    </header>
+    <main class="form-section">
         <form class="searchForm" action="form.php" method="post">
         Pokedex ID: <input type="text" name="pokedex_id"><br>
         Name: <input type="text" name="name"><br>
@@ -28,7 +24,7 @@ $allPokemon = $query->fetchAll();
         Type 2: <input type="text" name="type2"><br>
         <input type="submit" value="PokeSearch">
         </form>
-    </section>
+    </main>
 </body>
 </html>
 

@@ -10,7 +10,7 @@ function showPokemon(array $allPokemon) {
             "<p>Name: " . $pokemon['name'] . "</p>" .
             "<p>Type 1: " . $pokemon['type_1'] . "</p>" .
             "<p>Type 2: " . $pokemon['type_2'] . "</p>" .
-            "<p>HP: " . $pokemon['hp'] . "</p>" . "<br>" .
+            "<p>HP: " . $pokemon['hp'] . "</p>" .
             "<img src='kanto/$lowerCaseName.png'>" . "</div>";
     }
     return $returnedHTML;
