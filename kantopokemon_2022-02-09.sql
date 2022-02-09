@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.37)
 # Database: kantopokemon
-# Generation Time: 2022-02-07 16:16:59 +0000
+# Generation Time: 2022-02-09 10:10:34 +0000
 # ************************************************************
 
 
@@ -20,12 +20,12 @@ SET NAMES utf8mb4;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-# Dump of table kanto
+# Dump of table kanto pokemon plural
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `kanto`;
+DROP TABLE IF EXISTS `kanto pokemon plural`;
 
-CREATE TABLE `kanto` (
+CREATE TABLE `kanto pokemon plural` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `pokedex_id` int(11) DEFAULT NULL,
   `name` varchar(100) DEFAULT NULL,
@@ -35,10 +35,10 @@ CREATE TABLE `kanto` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `kanto` WRITE;
-/*!40000 ALTER TABLE `kanto` DISABLE KEYS */;
+LOCK TABLES `kanto pokemon plural` WRITE;
+/*!40000 ALTER TABLE `kanto pokemon plural` DISABLE KEYS */;
 
-INSERT INTO `kanto` (`id`, `pokedex_id`, `name`, `type_1`, `type_2`, `hp`)
+INSERT INTO `kanto pokemon plural` (`id`, `pokedex_id`, `name`, `type_1`, `type_2`, `hp`)
 VALUES
 	(1,1,'Bulbasaur','Grass','Poison',45),
 	(2,2,'Ivysaur','Grass','Poison',60),
@@ -190,7 +190,7 @@ VALUES
 	(148,150,'Mewtwo','Psychic','',106),
 	(149,151,'Mew','Psychic','',100);
 
-/*!40000 ALTER TABLE `kanto` ENABLE KEYS */;
+/*!40000 ALTER TABLE `kanto pokemon plural` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
