@@ -13,6 +13,7 @@ h1 {
     color: #000000;
     font-size: 5rem;
     letter-spacing: 0.1em;
+    padding-right: 100px;
 }
 
 body {
@@ -36,8 +37,14 @@ body {
     border-color: #ff6a00;
     background-color: #ffffff;
     padding: 30px;
+    width: 16%;
 }
 
+.poke-sprite {
+    position: relative;
+    height: 90px;
+    left: 180px;
+}
 .form-section {
     padding: 40px;
     font-family: PokemonHollow;

@@ -16,15 +16,7 @@ $allPokemon = $query->fetchAll();
     <header>
             <h1>Pokemon of the Kanto Region</h1>
     </header>
-    <main class="form-section">
-        <form class="searchForm" action="form.php" method="post">
-        Pokedex ID: <input type="text" name="pokedex_id"><br>
-        Name: <input type="text" name="name"><br>
-        Type 1: <input type="text" name="type1"><br>
-        Type 2: <input type="text" name="type2"><br>
-        <input type="submit" value="PokeSearch">
-        </form>
-    </main>
+
 </body>
 </html>
 
