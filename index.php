@@ -2,26 +2,22 @@
 require_once './functions.php';
 $db = new PDO('mysql:host=db; dbname=kantopokemon', 'root', 'password');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-//if(isset($_POST['pokedex_id']) && isset($_POST['name']) && isset($_POST['type1']) && isset($_POST['type2']) && isset($_POST['region'])) {
-    $otherQuery = $db->prepare('INSERT INTO `kanto-pokemon` (`pokedex_id`, `name`, `type_1`, `type_2`, `region`) VALUES (:pokedex_id, :name, :type1, :type2, :region);');
+if(isset($_POST['pokedex_id']) && isset($_POST['name']) && isset($_POST['type1']) && isset($_POST['type2']) && isset($_POST['region'])) {
+    $otherQuery = $db->prepare('INSERT INTO `kanto-pokemon` (`pokedex_id`, `name`, `type_1`, `type_2`, `hp`, `region`) VALUES (:pokedexId, :name, :type1, :type2, :hp, :region);');
 
-    $pokedexId = 152;
-    $name = 'twat';
-    $type1 = 'Water';
-    $type2 = 'Flying';
-    $hp = 45;
-    $region = 'Johto';
+    $pokedexId = $_POST['pokedex_id'];
+    $name = $_POST['name'];
+    $type1 = $_POST['type1'];
+    $type2 = $_POST['type2'];
+    $hp = $_POST['hp'];
+    $region = $_POST['region'];
 
-
-    $otherQuery->execute([':pokedexId' => $pokedexId, ':name' => $name, ':type1' => $type1, ':type2' => $type2, ':region' => $region]);
-    var_dump($otherQuery);
-//}
+    $otherQuery->execute([':pokedexId' => $pokedexId, ':name' => $name, ':type1' => $type1, ':type2' => $type2, ':hp' => $hp, ':region' => $region]);
+}
 
 $query = $db->prepare('SELECT * FROM `kanto-pokemon`');
 $query->execute();
 $allPokemon = $query->fetchAll();
-
-print_r($_POST);
 
 ?>
 
@@ -35,10 +31,10 @@ print_r($_POST);
     <h1>Pokémon of the Kanto Region</h1>
 </header>
 <main>
-    <form action="index.php" method="POST">
+    <form class="search-form" action="index.php" method="POST">
         Pokédex ID: <input type="number" name="pokedex_id" required>
         Name: <input type="text" name="name" required>
-        Type 1: <input name="Type 1: " list="type1" placeholder="Click for options">
+        Type 1: <input name="type1" list="type1" placeholder="Click for options">
         <datalist id="type1">
             <option value="Normal">
             <option value="Fire">
@@ -59,7 +55,7 @@ print_r($_POST);
             <option value="Fairy">
             <option value="Ice">
         </datalist>
-        Type 2: <input list="type2" name="Type 2: "  placeholder="Click for options">
+        Type 2: <input list="type2" name="type2"  placeholder="Click for options">
         <datalist id="type2">
             <option value="Normal">
             <option value="Fire">
@@ -80,7 +76,8 @@ print_r($_POST);
             <option value="Fairy">
             <option value="Ice">
         </datalist>
-        Region: <input list="region" name="Region: "  placeholder="Click for options" required>
+        HP: <input type="number" name="hp" required>
+        Region: <input list="region" name="region"  placeholder="Click for options" required>
         <datalist id="region">
             <option value="Kanto">
             <option value="Johto">
