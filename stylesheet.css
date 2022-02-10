@@ -55,7 +55,7 @@ body {
 }
 
 .poke-sprite {
-    position: relative;
+    float: right;
     height: 90px;
     left: 180px;
 }
