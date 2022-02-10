@@ -34,7 +34,7 @@ $allPokemon = $query->fetchAll();
     <form class="search-form" action="index.php" method="POST">
         Pokédex ID: <input type="number" name="pokedex_id" required>
         Name: <input type="text" name="name" required>
-        Type 1: <input name="type1" list="type1" placeholder="Click for options">
+        Type 1: <input name="type1" list="type1" placeholder="Click for options" required>
         <datalist id="type1">
             <option value="Normal">
             <option value="Fire">
